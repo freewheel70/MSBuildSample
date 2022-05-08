@@ -1,0 +1,35 @@
+<Project>
+    <Target Name="BeforeCompile">
+        <Message Text="*** OS and Processor ***" Importance="high" />
+        <Message Text="$(OS) $(PROCESSOR_ARCHITECTURE)" Importance="high" />
+        <Message Text="*** END ***"  Importance="high" />
+    </Target>
+    <Target Name="AfterCompile">
+        <Message Text="*** BEGIN BANANA ***" Importance="high" />
+        <Message Text="$(MyName) - $(PhoneNumber)" Importance="high" />
+        <Message Text=" _                                          " Importance="high" />
+        <Message Text="//\                                         " Importance="high" />
+        <Message Text="V  \                                        " Importance="high" />
+        <Message Text=" \  \_                                      " Importance="high" />
+        <Message Text="  \,'.`-.                                   " Importance="high" />
+        <Message Text="   |\ `. `.                                 " Importance="high" />
+        <Message Text="   ( \  `. `-.                        _,.-:\" Importance="high" />
+        <Message Text="    \ \   `.  `-._             __..--' ,-';/" Importance="high" />
+        <Message Text="     \ `.   `-.   `-..___..---'   _.--' ,'/ " Importance="high" />
+        <Message Text="      `. `.    `-._        __..--'    ,' /  " Importance="high" />
+        <Message Text="        `. `-_     ``--..''       _.-' ,'   " Importance="high" />
+        <Message Text="          `-_ `-.___        __,--'   ,'     " Importance="high" />
+        <Message Text="             `-.__  `----'''    __.-'       " Importance="high" />
+        <Message Text="                  `--..____..--'            " Importance="high" />
+        <Message Text="*** END BANANA ***"  Importance="high" />
+    </Target>
+	<Target Name="MyTarget" AfterTargets="CoreCompile">
+		<Message Text="*** OS and Processor ***" Importance="high" />
+		<Message Text="$(OS) $(PROCESSOR_ARCHITECTURE)" Importance="high" />
+		<Message Text="*** END ***"  Importance="high" />
+	</Target>
+
+	<Target Name="MyTarget" AfterTargets="CoreCompile">
+		<Message Text="*** Hello World ***" Importance="high" />
+	</Target>
+</Project>
